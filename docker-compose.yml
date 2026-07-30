@@ -3,6 +3,10 @@ services:
     build: .
     expose:
       - "8085"
+    labels:
+      - "traefik.http.middlewares.careerpulse-basic-auth.basicauth.users=${CAREERPULSE_BASIC_AUTH:?}"
+      - "traefik.http.middlewares.careerpulse-basic-auth.basicauth.removeheader=true"
+      - "coolify.traefik.middlewares=careerpulse-basic-auth"  
     volumes:
       - ./data:/app/data
     env_file:

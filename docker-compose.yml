@@ -1,8 +1,8 @@
 services:
   careerpulse:
     build: .
-    ports:
-      - "8085:8085"
+    expose:
+      - "8085"
     volumes:
       - ./data:/app/data
     env_file:

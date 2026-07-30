@@ -4,7 +4,7 @@ services:
     expose:
       - "8085"
     labels:
-      - "traefik.http.middlewares.careerpulse-basic-auth.basicauth.users=${CAREERPULSE_BASIC_AUTH:?}"
+      - "traefik.http.middlewares.careerpulse-basic-auth.basicauth.users=${CAREERPULSE_TRAEFIK_AUTH:?}"
       - "traefik.http.middlewares.careerpulse-basic-auth.basicauth.removeheader=true"
       - "coolify.traefik.middlewares=careerpulse-basic-auth"  
     volumes:

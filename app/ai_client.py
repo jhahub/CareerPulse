@@ -96,7 +96,7 @@ OPENAI_COMPAT_PROVIDERS = {
     },
     "google": {
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
-        "default_model": "gemini-2.0-flash",
+        "default_model": "gemini-3.5-flash-lite",
     },
     "openrouter": {
         "base_url": "https://openrouter.ai/api/v1",
